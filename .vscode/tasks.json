@@ -1,0 +1,39 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc.exe build active file",
+			"command": "C:\\MinGW\\bin\\gcc.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe",
+				"-IC:/msys64/ucrt64/include/gtk-3.0",
+				"-IC:/msys64/ucrt64/include/pango-1.0",
+				"-IC:/msys64/ucrt64/include/harfbuzz",
+				"-IC:/msys64/ucrt64/include/fribidi",
+				"-IC:/msys64/ucrt64/include/cairo",
+				"-IC:/msys64/ucrt64/include/freetype2",
+				"-IC:/msys64/ucrt64/include/pixman-1",
+				"-IC:/msys64/ucrt64/include/gdk-pixbuf-2.0",
+				"-IC:/msys64/ucrt64/include/glib-2.0",
+				"-IC:/msys64/ucrt64/lib/glib-2.0/include",
+				"`pkg-config --cflags --libs gtk+-3.0`"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:\\MinGW\\bin\\gcc.exe"
+		}
+	]
+}
